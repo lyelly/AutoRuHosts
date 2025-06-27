@@ -56,7 +56,9 @@ try {
     if ($commitJson.Length -gt 0) {
         $lastCommitDateRaw = $commitJson[0].commit.committer.date
         $lastCommitDate = ([datetime]$lastCommitDateRaw).ToLocalTime()
-        Print-Message "[+]" "Last update at: $lastCommitDate"
+        $culture = [System.Globalization.CultureInfo]::GetCultureInfo("ru-RU")
+        $formattedDate = $lastCommitDate.ToString("dd MMMM yyyy HH:mm:ss", $culture)
+        Print-Message "[+]" "Last update at: $formattedDate"
     }
     else {
         Print-Message "[!]" "No date found."
