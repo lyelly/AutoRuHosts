@@ -55,7 +55,7 @@ try {
 
     if ($commitJson.Length -gt 0) {
         $lastCommitDateRaw = $commitJson[0].commit.committer.date
-        $lastCommitDate = [DateTime]::Parse($lastCommitDateRaw).ToLocalTime()
+        $lastCommitDate = ([datetime]$lastCommitDateRaw).ToLocalTime()
         Print-Message "[+]" "Last update at: $lastCommitDate"
     }
     else {
