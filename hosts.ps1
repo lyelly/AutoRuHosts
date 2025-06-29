@@ -26,7 +26,7 @@ Write-Host @"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $commitsApiUrl = "https://api.github.com/repos/ImMALWARE/textbin/commits?path=hosts&per_page=1"
-$rawUrl = "https://raw.githubusercontent.com/ImMALWARE/textbin/refs/heads/main/hosts"
+$rawUrl = "https://raw.githubusercontent.com/ImMALWARE/dns.malw.link/refs/heads/master/hosts"
 $hostsPath = "$env:SystemRoot\System32\drivers\etc\hosts"
 $processSuccess = $true
 
